@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            button1.Top -= e.Y;
+            button1.Left += e.X;
+            if (button1.Top < -10 || button1.Top > 100) button1.Top = 60;
+            if (button1.Left < -39 || button1.Left > 129) button1.Left = 50;
+         }
+
+        private void button2_MouseMove(object sender, MouseEventArgs e)
+        {
+            button2.Top -= e.Y;
+            button2.Left += e.X;
+            if (button2.Top < -40 || button2.Top > 200) button2.Top = 80;
+            if (button2.Left < -10 || button2.Left > 190) button2.Left = 90;
+        }
+
+        private void button3_MouseMove(object sender, MouseEventArgs e)
+        {
+            button3.Top -= e.Y;
+            button3.Left += e.X;
+            if (button3.Top < -1 || button3.Top > 150) button3.Top = 20;
+            if (button3.Left < -28|| button3.Left > 100) button3.Left = 30;
+        }
+
+     }
+}
